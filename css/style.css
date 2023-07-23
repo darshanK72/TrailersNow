@@ -596,7 +596,7 @@ header .logo {
   gap: 12px;
 }
 
-.slider-control .silder-item{
+.slider-control .slider-item{
   width: 100px;
   border-radius: var(--radius-8);
   flex-shrink: 0;

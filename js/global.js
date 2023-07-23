@@ -20,3 +20,10 @@ const searchTogglers = document.querySelectorAll("[search-toggler]");
 addEventOnElements(searchTogglers,'click',function(){
     searchBox.classList.toggle('active');
 })
+
+const getMovieDetail = function(id){
+    if(localStorage.getItem("movieId")){
+        localStorage.removeItem("movieId");
+    }
+    localStorage.setItem("movieId",String(id));
+}
