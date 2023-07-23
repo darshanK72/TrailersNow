@@ -566,9 +566,13 @@ header .logo {
 
 .banner .genre{ margin-block: 12px;}
 
-.banner-text{
-  -webkit-line-clamp: 2;
-  margin-block-end: 24px;
+p.banner-text{
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-block-end: 24px; 
 }
 
 .banner .btn{ background-color: var(--primary);}
@@ -692,7 +696,6 @@ header .logo {
 /* Movie List Page */
 
 .genre-list .title-wrapper{ margin-block-end: 56px;}
-
 .grid-list{
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
