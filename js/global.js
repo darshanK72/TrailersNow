@@ -27,3 +27,17 @@ const getMovieDetail = function(id){
     }
     localStorage.setItem("movieId",String(id));
 }
+
+const getMovieList = function(urlParam,genreName){
+    if(localStorage.getItem("urlParam")){
+        localStorage.removeItem("urlParam");
+    }
+
+    if(localStorage.getItem("genreName")){
+        localStorage.removeItem("genreName");
+    }
+
+
+    window.localStorage.setItem("urlParam",urlParam);
+    window.localStorage.setItem("genreName",genreName);
+}

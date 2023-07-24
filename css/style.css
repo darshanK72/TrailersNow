@@ -727,3 +727,139 @@ p.banner-text{
   font-weight: var(--weight-bold);
   margin-block-end: 8px;
 }
+
+/* Media Queries */
+
+/* Larger than 575px */
+@media (min-width:575px){
+
+  .banner-content{
+    right: auto;
+    max-width: 500px;
+  }
+
+  .slider-control{
+    left: calc(100% - 400px);
+  }
+
+  
+  .detail-content{
+    max-width: 750px;
+  }
+}
+
+@media (min-width:768px){
+
+  :root{
+    --banner-overlay: 90deg,hsl(220,17%,7%) 0%, hsla(220,17%,7%,0) 100%;
+    --fs-heading:5.4rem;
+  }
+
+  .container{padding-inline: 24px;}
+
+  .slider-list{
+    margin-inline: -24px;
+  }
+
+  .search-btn{
+    display: none;
+  }
+
+  .search-box{
+    all: unset;
+    display: block;
+    width: 369px;
+  }
+
+  .banner{
+    height: 500px;
+  }
+
+  .banner-content{
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 50px;
+  }
+
+  .movie-detail{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .movie-detail .detail-box{
+    flex-grow: 1;
+  }
+
+  .movie-detail .movie-poster{
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+  }
+
+  .movie-detail .slider-list{
+    margin-inline-start: 0;
+    border-radius: var(--radius-16) 0 0 var(--radius-16);
+  }
+
+  .movie-detail .slider-inner::before{
+    display: none;
+  }
+}
+
+
+@media (min-width:1200px) {
+  
+
+  header{
+    padding: 28px 56px;
+  }
+
+  .logo img{
+    width: 180px;
+  }
+
+  .menu-btn,
+  .overlay{
+    display: none;
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+  }
+
+  .sidebar{
+    position: static;
+    visibility: visible;
+    border-block-start: 0 ;
+    height: calc(100vh - 104px);
+  }
+
+  .sidebar.active{
+    transform: none;
+  }
+
+  .sidebar-list,
+  .sidebar-footer{
+    padding-inline: 56px;
+  }
+
+  .container{
+    height: calc(100vh - 104px);
+    border-top-left-radius:var(--radius-36) ;
+  }
+
+  .backdrop-image{
+    border-top-left-radius: var(--radius-36);
+  }
+
+  .search-model{
+    top: 104px;
+    padding: 60px;
+  }
+  .banner-content{
+    left: 100px;
+  }
+}
+

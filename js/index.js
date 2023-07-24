@@ -3,10 +3,12 @@
 import {generateSidebar} from './sidebar.js';
 import {imageBaseUrl,fetchData} from './api.js'
 import {createMovieCard} from "./movie-card.js";
+import {search} from "./search.js"
 
 const pageContent = document.querySelector('[page-content]');
 
 generateSidebar();
+search();
 
 const homePageSections = [
     {
@@ -49,7 +51,6 @@ fetchData('https://api.themoviedb.org/3/genre/movie/list',function({genres}){
 
 const heroBanner = function({results:movieList}){
 
-    console.log(movieList);
     const banner = document.createElement('section');
     banner.classList.add('banner');
     banner.setAttribute("aria-label","popular movies");
@@ -137,7 +138,6 @@ const heroBanner = function({results:movieList}){
     addHeroSlide();
 
     for(const {title,path} of homePageSections){
-        console.log(title, path);
         fetchData(`https://api.themoviedb.org/3${path}`,createMovieList,title);
     }
 

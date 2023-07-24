@@ -3,7 +3,7 @@
 import { imageBaseUrl } from "./api.js";
 
 export function createMovieCard(movie){
-
+    
     const {
         poster_path,
         title,
@@ -35,7 +35,5 @@ export function createMovieCard(movie){
 
     `;
 
-    return card;
-
-    
+    return card;   
 }

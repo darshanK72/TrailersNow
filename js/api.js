@@ -4,9 +4,6 @@ const token = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjZDYwMTBjY2YxODkzODM5NDIwN2Y5ZGY5
 const imageBaseUrl = 'https://image.tmdb.org/t/p/';
 
 const fetchData = function (url, callback, optionalParam) {
-
-    console.log("in fetch data");
-
     const options = {
         method: 'GET',
         headers: {
@@ -19,7 +16,6 @@ const fetchData = function (url, callback, optionalParam) {
     fetch(url,options)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             return callback(data,optionalParam)
         });
 

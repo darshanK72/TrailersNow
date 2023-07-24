@@ -3,8 +3,10 @@
 import {generateSidebar} from './sidebar.js';
 import {imageBaseUrl,fetchData} from './api.js'
 import {createMovieCard} from "./movie-card.js";
+import {search} from "./search.js"
 
 generateSidebar();
+search();
 
 const getGenres = function(genreList){
     const newGenreList = [];
